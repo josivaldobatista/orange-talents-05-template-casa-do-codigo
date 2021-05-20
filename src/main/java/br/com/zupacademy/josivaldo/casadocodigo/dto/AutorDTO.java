@@ -4,8 +4,10 @@ import javax.validation.constraints.Email;
 import javax.validation.constraints.NotBlank;
 import javax.validation.constraints.Size;
 
+import br.com.zupacademy.josivaldo.casadocodigo.controllers.validations.AutorSalvarValid;
 import br.com.zupacademy.josivaldo.casadocodigo.entities.Autor;
 
+@AutorSalvarValid
 public class AutorDTO {
 
   @NotBlank
@@ -28,6 +30,10 @@ public class AutorDTO {
 
   public Autor copyDtoToMOdel() {
     return new Autor(this.nome, this.email, this.descricao);
+  }
+
+  public String getEmail() {
+    return email;
   }
 
 }

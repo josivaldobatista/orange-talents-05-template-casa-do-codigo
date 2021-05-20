@@ -15,7 +15,7 @@ import br.com.zupacademy.josivaldo.casadocodigo.repositories.AutorRepository;
 
 @RestController
 @RequestMapping(value = "/autores")
-public class AutorResource {
+public class AutorController {
 
   @Autowired
   private AutorRepository repository;

@@ -7,4 +7,6 @@ import br.com.zupacademy.josivaldo.casadocodigo.entities.Autor;
 
 @Repository
 public interface AutorRepository extends JpaRepository<Autor, Long> {
+
+  Autor findByEmail(String email);
 }
