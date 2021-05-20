@@ -1,0 +1,10 @@
+INSERT INTO tb_autor (nome, email, descricao, instante_criacao) VALUES ('Bob Amarelo', 'bob@email.com', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.', '2021-05-18 15:48:25.315173');
+INSERT INTO tb_autor (nome, email, descricao, instante_criacao) VALUES ('Maria Laranja', 'maria@email.com', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.', '2021-05-18 16:42:41.387518');
+INSERT INTO tb_autor (nome, email, descricao, instante_criacao) VALUES ('Alex Cinza', 'alex@email.com', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.', '2021-05-18 17:34:49.811302');
+INSERT INTO tb_autor (nome, email, descricao, instante_criacao) VALUES ('Joe Caramelo', 'bob@email.com', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.', '2021-05-18 21:51:30.753517');
+INSERT INTO tb_autor (nome, email, descricao, instante_criacao) VALUES ('Felix Preto', 'felix@email.com', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.', '2021-05-19 07:54:56.928182');
+INSERT INTO tb_autor (nome, email, descricao, instante_criacao) VALUES ('Ikki Azul', 'ikki@email.com', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.', '2021-04-20 19:54:56.928182');
+INSERT INTO tb_autor (nome, email, descricao, instante_criacao) VALUES ('Tomy Branco', 'tomy@email.com', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.', '2021-03-30 07:54:56.928182');
+INSERT INTO tb_autor (nome, email, descricao, instante_criacao) VALUES ('Júlio Rosa', 'julio@email.com', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.', '2021-01-10 07:54:56.928182');
+INSERT INTO tb_autor (nome, email, descricao, instante_criacao) VALUES ('Logan Verde', 'logan@email.com', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.', '2021-02-09 07:54:56.928182');
+INSERT INTO tb_autor (nome, email, descricao, instante_criacao) VALUES ('Goku Prata', 'goku@email.com', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.', '2021-05-12 07:54:56.928182');
