@@ -3,12 +3,12 @@ package br.com.zupacademy.josivaldo.casadocodigo.dto;
 import javax.validation.constraints.NotBlank;
 
 import br.com.zupacademy.josivaldo.casadocodigo.entities.Categoria;
-import br.com.zupacademy.josivaldo.casadocodigo.validations.CategoriaSalvarValid;
+import br.com.zupacademy.josivaldo.casadocodigo.validations.UniqueValueValid;
 
-@CategoriaSalvarValid
 public class CategoriaDTO {
 
   @NotBlank
+  @UniqueValueValid(domainClass = Categoria.class, fieldName = "nome")
   private String nome;
 
   @Deprecated

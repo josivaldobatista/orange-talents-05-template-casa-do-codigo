@@ -15,17 +15,30 @@ import org.springframework.web.bind.annotation.ExceptionHandler;
 public class ValidationErrorHandler {
 
   @ExceptionHandler(MethodArgumentNotValidException.class)
-  public ResponseEntity<ErroValidacao> erroDeValidacao(MethodArgumentNotValidException e, HttpServletRequest request) {
-    ErroValidacao erro = new ErroValidacao();
+  public ResponseEntity<ValidationError> erroDeValidacao(MethodArgumentNotValidException e, HttpServletRequest request) {
+    ValidationError erro = new ValidationError();
     HttpStatus status = HttpStatus.UNPROCESSABLE_ENTITY;
     erro.setTimestamp(Instant.now());
     erro.setStatus(status.value());
     erro.setError("Erro de validação");
+    erro.setMessage(e.getMessage());
     erro.setPath(request.getRequestURI());
 
     for (FieldError fieldError : e.getBindingResult().getFieldErrors()) {
-      erro.addErro(fieldError.getField(), fieldError.getDefaultMessage());
+      erro.addError(fieldError.getField(), fieldError.getDefaultMessage());
     }
     return ResponseEntity.status(status).body(erro);
+  }
+
+  @ExceptionHandler(IllegalArgumentException.class)
+  public ResponseEntity<StandardError> illegalArgument(IllegalArgumentException e, HttpServletRequest request) {
+    StandardError err = new StandardError();
+    HttpStatus status = HttpStatus.BAD_REQUEST;
+      err.setTimestamp(Instant.now());
+      err.setStatus(status.value());
+      err.setError("Bad request");
+      err.setMessage(e.getMessage());
+      err.setPath(request.getRequestURI());
+    return ResponseEntity.status(status).body(err);
   }
 }

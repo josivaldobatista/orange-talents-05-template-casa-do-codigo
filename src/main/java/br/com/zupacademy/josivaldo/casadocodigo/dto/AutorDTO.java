@@ -5,9 +5,8 @@ import javax.validation.constraints.NotBlank;
 import javax.validation.constraints.Size;
 
 import br.com.zupacademy.josivaldo.casadocodigo.entities.Autor;
-import br.com.zupacademy.josivaldo.casadocodigo.validations.AutorSalvarValid;
+import br.com.zupacademy.josivaldo.casadocodigo.validations.UniqueValueValid;
 
-@AutorSalvarValid
 public class AutorDTO {
 
   @NotBlank
@@ -15,6 +14,7 @@ public class AutorDTO {
 
   @NotBlank
   @Email(message = "Informe um E-mail válido")
+  @UniqueValueValid(domainClass = Autor.class, fieldName = "email")
   private String email;
 
   @NotBlank
