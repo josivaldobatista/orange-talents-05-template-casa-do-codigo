@@ -4,8 +4,8 @@ import javax.validation.constraints.Email;
 import javax.validation.constraints.NotBlank;
 import javax.validation.constraints.Size;
 
-import br.com.zupacademy.josivaldo.casadocodigo.controllers.validations.AutorSalvarValid;
 import br.com.zupacademy.josivaldo.casadocodigo.entities.Autor;
+import br.com.zupacademy.josivaldo.casadocodigo.validations.AutorSalvarValid;
 
 @AutorSalvarValid
 public class AutorDTO {

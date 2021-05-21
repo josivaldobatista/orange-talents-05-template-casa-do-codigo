@@ -1,4 +1,4 @@
-package br.com.zupacademy.josivaldo.casadocodigo.controllers.validations;
+package br.com.zupacademy.josivaldo.casadocodigo.validations;
 
 import java.lang.annotation.ElementType;
 import java.lang.annotation.Retention;

@@ -1,4 +1,4 @@
-package br.com.zupacademy.josivaldo.casadocodigo.controllers.validations;
+package br.com.zupacademy.josivaldo.casadocodigo.validations;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -8,9 +8,9 @@ import javax.validation.ConstraintValidatorContext;
 
 import org.springframework.beans.factory.annotation.Autowired;
 
-import br.com.zupacademy.josivaldo.casadocodigo.controllers.exceptions.CampoMensagem;
 import br.com.zupacademy.josivaldo.casadocodigo.dto.AutorDTO;
 import br.com.zupacademy.josivaldo.casadocodigo.entities.Autor;
+import br.com.zupacademy.josivaldo.casadocodigo.exceptions.CampoMensagem;
 import br.com.zupacademy.josivaldo.casadocodigo.repositories.AutorRepository;
 
 public class AutorSalvarValidator implements ConstraintValidator<AutorSalvarValid, AutorDTO> {

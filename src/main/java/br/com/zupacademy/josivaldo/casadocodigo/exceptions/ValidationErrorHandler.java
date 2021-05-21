@@ -1,4 +1,4 @@
-package br.com.zupacademy.josivaldo.casadocodigo.controllers.exceptions;
+package br.com.zupacademy.josivaldo.casadocodigo.exceptions;
 
 import java.time.Instant;
 
