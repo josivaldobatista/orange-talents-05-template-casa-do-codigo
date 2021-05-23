@@ -4,8 +4,6 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
-import javax.persistence.JoinColumn;
-import javax.persistence.OneToOne;
 import javax.persistence.Table;
 import javax.validation.constraints.NotBlank;
 
@@ -20,22 +18,17 @@ public class Categoria {
   @NotBlank
   private String nome;
 
-  @OneToOne
-  @JoinColumn(name = "livro_id")
-  private Livro livro;
-
   @Deprecated
   public Categoria() {
   }
 
-  public Categoria(@NotBlank String nome, Livro livro) {
+  public Categoria(@NotBlank String nome) {
     this.nome = nome;
-    this.livro = livro;
   }
 
   @Override
   public String toString() {
-    return "Categoria [livro=" + livro + ", nome=" + nome + "]";
+    return "Categoria [nome=" + nome + "]";
   }
 
 }

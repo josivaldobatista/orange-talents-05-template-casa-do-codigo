@@ -23,7 +23,7 @@ public class CategoriaController {
   @Transactional
   @PostMapping
   public String salvar(@RequestBody @Valid CategoriaDTO dto) {
-    Categoria categoria = dto.copyDtoToEntity();
+    Categoria categoria = dto.toModel();
     repository.save(categoria);
     return categoria.toString();
   }

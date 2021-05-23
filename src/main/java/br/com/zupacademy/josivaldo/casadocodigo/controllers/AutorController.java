@@ -23,7 +23,7 @@ public class AutorController {
   @PostMapping
   @Transactional
   public String salvar(@RequestBody @Valid AutorDTO dto) {
-    Autor autor = dto.copyDtoToMOdel();
+    Autor autor = dto.toModel();
     repository.save(autor);
     return autor.toString();
   }
