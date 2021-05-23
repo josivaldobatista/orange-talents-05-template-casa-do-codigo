@@ -68,27 +68,33 @@ public class Livro {
   public Livro() {
   }
 
-  public Livro(@NotBlank String titulo,
-			@NotBlank @Size(max = 500) String resumo, @NotBlank String sumario,
-			@NotNull @Min(20) BigDecimal preco, @Min(100) int numeroPaginas,
-			@NotBlank String isbn, @Future @NotNull LocalDate dataPublicacao,
-			@NotNull @Valid Autor autor, @NotNull @Valid Categoria categoria) {
-				this.titulo = titulo;
-				this.resumo = resumo;
-				this.sumario = sumario;
-				this.preco = preco;
-				this.numeroPaginas = numeroPaginas;
-				this.isbn = isbn;
-				this.dataPublicacao = dataPublicacao;
-				this.autor = autor;
-				this.categoria = categoria;
-	}
+  public Livro(@NotBlank String titulo, @NotBlank @Size(max = 500) String resumo, @NotBlank String sumario,
+      @NotNull @Min(20) BigDecimal preco, @Min(100) int numeroPaginas, @NotBlank String isbn,
+      @Future @NotNull LocalDate dataPublicacao, @NotNull @Valid Autor autor, @NotNull @Valid Categoria categoria) {
+    this.titulo = titulo;
+    this.resumo = resumo;
+    this.sumario = sumario;
+    this.preco = preco;
+    this.numeroPaginas = numeroPaginas;
+    this.isbn = isbn;
+    this.dataPublicacao = dataPublicacao;
+    this.autor = autor;
+    this.categoria = categoria;
+  }
+
+  public Long getId() {
+    return id;
+  }
+
+  public String getTitulo() {
+    return titulo;
+  }
 
   @Override
   public String toString() {
     return "Livro [autor=" + autor + ", categoria=" + categoria + ", dataPublicacao=" + dataPublicacao + ", id=" + id
-        + ", isbn=" + isbn + ", numeroPaginas=" + numeroPaginas + ", preco=" + preco + ", resumo=" + resumo + ", sumario="
-        + sumario + ", titulo=" + titulo + "]";
+        + ", isbn=" + isbn + ", numeroPaginas=" + numeroPaginas + ", preco=" + preco + ", resumo=" + resumo
+        + ", sumario=" + sumario + ", titulo=" + titulo + "]";
   }
 
 }
