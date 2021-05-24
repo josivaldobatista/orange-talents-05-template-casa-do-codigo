@@ -90,6 +90,34 @@ public class Livro {
     return titulo;
   }
 
+  public Autor getAutor() {
+    return autor;
+  }
+
+  public String getIsbn() {
+    return isbn;
+  }
+
+  public Integer getNumeroPaginas() {
+    return numeroPaginas;
+  }
+
+  public BigDecimal getPreco() {
+    return preco;
+  }
+
+  public String getResumo() {
+    return resumo;
+  }
+
+  public String getSumario() {
+    return sumario;
+  }
+
+  public LocalDate getDataPublicacao() {
+    return dataPublicacao;
+  }
+
   @Override
   public String toString() {
     return "Livro [autor=" + autor + ", categoria=" + categoria + ", dataPublicacao=" + dataPublicacao + ", id=" + id

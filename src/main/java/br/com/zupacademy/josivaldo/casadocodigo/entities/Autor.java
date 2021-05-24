@@ -43,6 +43,14 @@ public class Autor {
     this.descricao = descricao;
   }
 
+  public String getNome() {
+    return nome;
+  }
+
+  public String getDescricao() {
+    return descricao;
+  }
+
   @Override
   public String toString() {
     return "Autor [descricao=" + descricao + ", email=" + email + ", instanteCriacao=" 
