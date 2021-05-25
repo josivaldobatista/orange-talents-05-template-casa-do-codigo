@@ -10,38 +10,37 @@ import br.com.zupacademy.josivaldo.casadocodigo.validations.ExistIdValid;
 import br.com.zupacademy.josivaldo.casadocodigo.validations.UniqueEstadoPaisValid;
 import br.com.zupacademy.josivaldo.casadocodigo.validations.UniqueValueValid;
 
-@UniqueEstadoPaisValid(domainClass = Estado.class, fieldNameOne = "nome", fieldNameTwo = "id_pais")
+@UniqueEstadoPaisValid(domainClass = Estado.class, fieldNameOne = "nome", fieldNameTwo = "pais_id")
 public class EstadoDTO {
 
-  @NotBlank
-  @UniqueValueValid(domainClass = Estado.class, fieldName = "nome")
-  private String nome;
+	@NotBlank
+	@UniqueValueValid(domainClass = Estado.class, fieldName = "nome")
+	private String nome;
 
-  @NotNull
-  @ExistIdValid(domainClass = Pais.class, fieldName = "id")
-  private Long id_pais;
+	@NotNull
+	@ExistIdValid(domainClass = Pais.class, fieldName = "id")
+	private Long pais_id;
 
-  public EstadoDTO(@NotBlank String nome, @NotNull Long id_pais) {
-		super();
+	public EstadoDTO(@NotBlank String nome, @NotNull Long pais_id) {
 		this.nome = nome;
-		this.id_pais = id_pais;
+		this.pais_id = pais_id;
 	}
 
-  @Override
-  public String toString() {
-    return "NovoEstadoRequest [nome=" + nome + ", id_pais=" + id_pais + "]";
-  }
+	@Override
+	public String toString() {
+		return "NovoEstadoRequest [nome=" + nome + ", pais_id=" + pais_id + "]";
+	}
 
-  public Estado toModel(EntityManager manager) {
-    return new Estado(nome, manager.find(Pais.class, id_pais));
-  }
+	public Estado toModel(EntityManager manager) {
+		return new Estado(nome, manager.find(Pais.class, pais_id));
+	}
 
-  public String getNome() {
-    return nome;
-  }
+	public String getNome() {
+		return nome;
+	}
 
-  public Long getId_pais() {
-    return id_pais;
-  }
+	public Long getPais_id() {
+		return pais_id;
+	}
 
 }
